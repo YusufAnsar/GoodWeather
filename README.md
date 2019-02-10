@@ -1,2 +1,2 @@
 # Good Weather
-A weather application using MVVM pattern.
+A weather iOS application using MVVM pattern.
