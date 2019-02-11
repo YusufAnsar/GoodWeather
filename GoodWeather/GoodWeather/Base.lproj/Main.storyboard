@@ -78,14 +78,46 @@
                     <view key="view" contentMode="scaleToFill" id="P2q-il-REj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-tI-04E">
+                                <rect key="frame" x="16" y="81" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPO-qj-1eY">
+                                <rect key="frame" x="170.5" y="147" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveCityButtonPressed:" destination="w9P-Qu-LcK" eventType="touchUpInside" id="UZO-oa-MtF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rPO-qj-1eY" firstAttribute="top" secondItem="Y4f-tI-04E" secondAttribute="bottom" constant="36" id="6Jj-xD-qKV"/>
+                            <constraint firstItem="Y4f-tI-04E" firstAttribute="centerX" secondItem="rPO-qj-1eY" secondAttribute="centerX" id="MlQ-ue-Mq1"/>
+                            <constraint firstItem="Y4f-tI-04E" firstAttribute="leading" secondItem="P2q-il-REj" secondAttribute="leadingMargin" id="TEU-46-TtW"/>
+                            <constraint firstItem="Y4f-tI-04E" firstAttribute="top" secondItem="apz-Kb-VN8" secondAttribute="top" constant="17" id="gCQ-RI-Ha9"/>
+                            <constraint firstItem="Y4f-tI-04E" firstAttribute="trailing" secondItem="P2q-il-REj" secondAttribute="trailingMargin" id="nOe-bk-chS"/>
+                            <constraint firstItem="rPO-qj-1eY" firstAttribute="centerX" secondItem="P2q-il-REj" secondAttribute="centerX" id="oub-DE-XnA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="apz-Kb-VN8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add City" id="1jR-ej-12Z"/>
+                    <navigationItem key="navigationItem" title="Add City" id="1jR-ej-12Z">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KMb-xf-Imx">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="w9P-Qu-LcK" id="dpF-hA-Kec"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="Y4f-tI-04E" id="hse-bO-CpJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxy-uw-ucg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2767" y="150"/>
+            <point key="canvasLocation" x="2765.5999999999999" y="149.77511244377811"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sot-UH-9cw">
